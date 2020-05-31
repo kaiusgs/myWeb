@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8"/>
+        <title>Truth or Drink</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" />
         <link rel="icon" href="{{ url_for('static', filename='Drink/favicon.ico') }}">
     </head>
     <body>
-        <h1>标题</h1>
-        <img src="{{ url_for('static', filename='Drink/page1.jpg') }}"/>
+        <header>
+            <h1>Truth or Drink</h1>
+        </header>
+        <div>
+            <img src="{{ url_for('static', filename='Drink/page1.jpg') }}"/>
+        </div>
+
+
+        <section style="width:1041px;background-color:#ffffff;padding:100px;font-size:27px;font-weight:700">
+            <p align="center">Here's a little info about the different decks:</p>
+            <p>
+                <a href="{{ url_for('game1') }}">ON THE ROCKS:</a><br/>
+                Chill questions for mixed company—with just enough of a bite to help you loosen up together.
+            </p>
+            <p>
+                <a href="{{ url_for('game2') }}">EXTRA DIRTY:</a><br/>
+                Cringeworthy, adult-themed questions that pair nicely with adult beverages.
+                NSFW—this one is all about sex in great detail. Skip printing this one if you don't want that.
+            </p>
+            <p>
+                <a href="{{ url_for('game3') }}">HAPPY HOUR:</a><br/>
+                Only good times allowed with these feel-good questions for you and your drinking buddies.
+            </p>
+            <p>
+                <a href="{{ url_for('game4') }}">LAST CALL:</a><br/>
+                Warning: do not play these questions unless it's very late and you've got nothing left to lose. 
+                NSFW—there's swears in this one too.
+            </p>
+            <p>
+                <a href="{{ url_for('game5') }}">WITH A TWIST:</a><br/>
+                Cut through the hard-to-swallow questions with these zesty, strategic twists in the gameplay.
+                Optional!
+            </p>
+        </section>
+        <br/>
+        <br/>
+
+        <footer>
+            developed by Kai
+        </footer>       
     </body>
 </html>
