@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>车木的秘密花园</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" />
+        <link rel="icon" href="{{ url_for('static', filename='icon.jpg') }}">
+    </head>
+
+    <body> 
+        
+        <header 
+            style="font-size:16px;color:grey;font-style:italic;clear:both;text-align:left;padding:2px;">
+            kaiusgs' secret garden
+        </header>
+
+        <div style = "padding:1px">
+            <img src="{{ url_for('static', filename='Gargantua.jpg') }}"/>
+        </div>
+
+        <section style="width:75%">
+            <h1 align="center" style="font-size:45px;"> 短文 </h1>
+
+            <ul style="font-size:36px;">
+                <li><a >待添加...</a></li>
+            </ul>
+            <hr/>
+        </section>
+
+        <section style="width:75%">
+            <h1 align="center" style="font-size:45px;"> 其他 </h1>
+
+            <ul style="font-size:36px;">
+                <li><a href="{{ url_for('goldentime') }}">~ Golden Time ~</a></li>
+                <li><a href="{{ url_for('love') }}">爱会消失</a></li>
+                <li><a href="{{ url_for('game') }}">Truth or Drink 喝酒游戏</a></li>
+            </ul>
+            <hr/>
+        </section>
+
+        <footer>
+            developed by kaiusgs@qq.com 
+        </footer>
+
+    </body>
+
+</html>

@@ -16,6 +16,7 @@ section {
     padding:30px;
     margin: 0 auto;
 }
+
 div {
     text-align:center;
     padding:30px;
@@ -28,12 +29,12 @@ img{
     max-height: 100%;
 }
 
-
 footer {
     background-color:black;
     color:grey;
-    font-family:times;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-style:italic;
     clear:both;
-    text-align:center;
+    text-align:right;
     padding:2px;
 }

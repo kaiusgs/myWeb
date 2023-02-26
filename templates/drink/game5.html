@@ -4,19 +4,19 @@
         <meta charset="UTF-8"/>
         <title>With a Twist</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" />
-        <link rel="icon" href="{{ url_for('static', filename='Drink/favicon.ico') }}">
+        <link rel="icon" href="{{ url_for('static', filename='drink/favicon.ico') }}">
     </head>
     <body>
         
         <div>
-            <img id="demo" style="width:95%" src="{{ url_for('static', filename='Drink/back2.jpg' ) }}" onclick="changeimg()"/>
+            <img id="demo" style="width:95%" src="{{ url_for('static', filename='drink/back2.jpg' ) }}" onclick="changeimg()"/>
         </div>
 
         <script>
             function changeimg(){
                 var n = Math.floor(Math.random()*54+1);
                 var numstr = n.toString();
-                var imgsrc = "/static/Drink/5.With a Twist/WithATwist (" + numstr + ").jpg" ;
+                var imgsrc = "/static/drink/5.With a Twist/WithATwist (" + numstr + ").jpg" ;
                 document.getElementById("demo").src = imgsrc;
             }
         </script>
