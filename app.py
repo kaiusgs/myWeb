@@ -1,39 +1,26 @@
 from flask import Flask,render_template,url_for,redirect
-
 import time
 
 app = Flask(__name__)
 
-@app.route('/shiseido_report_zhi')
-def fun1():
-    return render_template('shiseido_report_zhi.html')
-
-@app.route('/investment_research_report_zhi')
-def fun2():
-    return render_template('investment_research_report_zhi.html')
-
-@app.route('/bp_zhi')
-def fun3():
-    return render_template('bp_zhi.html')
-
-@app.route('/cv_cn_zhi')
-def fun4():
-    return render_template('cv_cn_zhi.html')
-
-@app.route('/cv_en_zhi')
-def fun5():
-    return render_template('cv_en_zhi.html')
-
-'''
+# 默认页
 @app.route('/')
 def goldentime():
     return render_template('goldentime.html')
+
+@app.route('/love')
+def love():
+    return render_template('love.html')
+
+@app.route('/changsha')
+def changsha():
+    return render_template('changsha.html')
 
 @app.route('/drink')
 def drink():
     return render_template('drink.html')
 
-'''
+# 喝酒游戏
 @app.route('/drink/game')
 def game():
     t = int( time.strftime("%H", time.localtime()) )
@@ -76,13 +63,23 @@ def game5():
         return render_template('Nogame.html')
     return render_template('game5.html')
 
-'''
-@app.route('/love')
-def love():
-    return render_template('love.html')
+# Wang Xuanzhi 的简历
+@app.route('/cv_cn_zhi')
+def fun4():
+    return render_template('cv_cn_zhi.html')
 
-@app.route('/changsha')
-def changsha():
-    return render_template('changsha.html')
-'''
+@app.route('/cv_en_zhi')
+def fun5():
+    return render_template('cv_en_zhi.html')
 
+@app.route('/shiseido_report_zhi')
+def fun1():
+    return render_template('shiseido_report_zhi.html')
+
+@app.route('/investment_research_report_zhi')
+def fun2():
+    return render_template('investment_research_report_zhi.html')
+
+@app.route('/bp_zhi')
+def fun3():
+    return render_template('bp_zhi.html')
