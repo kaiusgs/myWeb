@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Happy Hour</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" />
+        <link rel="icon" href="{{ url_for('static', filename='Drink/favicon.ico') }}">
+    </head>
+    <body>
+        
+        <div>
+            <img id="demo" style="width:95%" src="{{ url_for('static', filename='Drink/back1.jpg' ) }}" onclick="changeimg()"/>
+        </div>
+
+        <script>
+            function changeimg(){
+                var n = Math.floor(Math.random()*55+1);
+                var numstr = n.toString();
+                var imgsrc = "/static/Drink/3.Happy Hour/HappyHour (" + numstr + ").jpg" ;
+                document.getElementById("demo").src = imgsrc;
+            }
+        </script>
+    </body>
+</html>
