@@ -8,6 +8,12 @@ app = Flask(__name__)
 def index_page():
     return render_template('index.html')
 
+# 短文
+@app.route('/pdf1')
+def pdf1():
+    return render_template('rss2pdf/pdf1.html')
+
+# 其他
 @app.route('/goldentime')
 def goldentime():
     return render_template('goldentime.html')
