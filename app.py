@@ -13,6 +13,10 @@ def index_page():
 def pdf1():
     return render_template('rss2pdf/pdf1.html')
 
+@app.route('/pdf2')
+def pdf2():
+    return render_template('rss2pdf/pdf2.html')
+
 # 其他
 @app.route('/goldentime')
 def goldentime():

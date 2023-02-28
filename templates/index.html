@@ -16,21 +16,21 @@
         </header>
 
         <div style = "padding:1px">
-            <img src="{{ url_for('static', filename='Gargantua.jpg') }}"/>
+            <img style="width:100%;" src="{{ url_for('static', filename='Gargantua.jpg') }}"/>
         </div>
 
-        <section style="width:75%">
-            <h1 align="center" style="font-size:45px;"> 短文 </h1>
+        <section style="width:80%">
+            <h1 style="font-size:45px;"> 短文 </h1>
 
             <ul style="font-size:36px;">
-                <li><a >待添加...</a></li>
-                <li><a href="{{ url_for('pdf1') }}">互联网只提供刺激，不提供幸福 - 知乎的</a></li>
+                <li><a href="{{ url_for('pdf2') }}">互联网只提供刺激，不提供幸福 - 知乎</a></li>
+                <li><a href="{{ url_for('pdf1') }}">一万小时定律 - 知乎</a></li>
             </ul>
             <hr/>
         </section>
 
-        <section style="width:75%">
-            <h1 align="center" style="font-size:45px;"> 其他 </h1>
+        <section style="width:80%">
+            <h1 style="font-size:45px;"> 其他 </h1>
 
             <ul style="font-size:36px;">
                 <li><a href="{{ url_for('goldentime') }}">~ Golden Time ~</a></li>

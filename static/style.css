@@ -12,12 +12,22 @@ header {
     padding:15px;
 }
 
-section {
+footer {
+    background-color:black;
+    color:grey;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-style:italic;
+    clear:both;
+    text-align:right;
+    padding:2px;
+}
+
+section { /* 用来放文本 */
     padding:30px;
     margin: 0 auto;
 }
 
-div {
+div { /* 居中，用来放图片 */
     text-align:center;
     padding:30px;
 }
@@ -29,12 +39,18 @@ img{
     max-height: 100%;
 }
 
-footer {
-    background-color:black;
-    color:grey;
-    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-style:italic;
-    clear:both;
-    text-align:right;
-    padding:2px;
+h1{ /* 标题居中 */
+    text-align: center;
+}
+
+strong{
+    font-size: 36px;
+}
+
+p{
+    font-size: 27px;
+}
+
+blockquote{
+    font-size: 27px;
 }
