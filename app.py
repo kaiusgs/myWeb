@@ -17,6 +17,54 @@ def pdf1():
 def pdf2():
     return render_template('rss2pdf/pdf2.html')
 
+@app.route('/pdf3')
+def pdf3():
+    return render_template('rss2pdf/pdf3.html')
+
+@app.route('/pdf4')
+def pdf4():
+    return render_template('rss2pdf/pdf4.html')
+
+@app.route('/pdf5')
+def pdf5():
+    return render_template('rss2pdf/pdf5.html')
+
+@app.route('/pdf6')
+def pdf6():
+    return render_template('rss2pdf/pdf6.html')
+
+@app.route('/pdf7')
+def pdf7():
+    return render_template('rss2pdf/pdf7.html')
+
+@app.route('/pdf8')
+def pdf8():
+    return render_template('rss2pdf/pdf8.html')
+
+@app.route('/pdf9')
+def pdf9():
+    return render_template('rss2pdf/pdf9.html')
+
+@app.route('/pdf10')
+def pdf10():
+    return render_template('rss2pdf/pdf10.html')
+
+@app.route('/pdf11')
+def pdf11():
+    return render_template('rss2pdf/pdf11.html')
+
+@app.route('/pdf12')
+def pdf12():
+    return render_template('rss2pdf/pdf12.html')
+
+@app.route('/pdf13')
+def pdf13():
+    return render_template('rss2pdf/pdf13.html')
+
+@app.route('/pdf14')
+def pdf14():
+    return render_template('rss2pdf/pdf14.html')
+
 # 其他
 @app.route('/goldentime')
 def goldentime():
