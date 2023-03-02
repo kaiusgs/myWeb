@@ -65,6 +65,26 @@ def pdf13():
 def pdf14():
     return render_template('rss2pdf/pdf14.html')
 
+@app.route('/pdf15')
+def pdf15():
+    return render_template('rss2pdf/pdf15.html')
+
+@app.route('/pdf16')
+def pdf16():
+    return render_template('rss2pdf/pdf16.html')
+
+@app.route('/pdf17')
+def pdf17():
+    return render_template('rss2pdf/pdf17.html')
+
+@app.route('/pdf18')
+def pdf18():
+    return render_template('rss2pdf/pdf18.html')
+
+@app.route('/pdf19')
+def pdf19():
+    return render_template('rss2pdf/pdf19.html')
+
 # 其他
 @app.route('/goldentime')
 def goldentime():
