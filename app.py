@@ -121,6 +121,10 @@ def pdf27():
 def pdf28():
     return render_template('rss2pdf/pdf28.html')
 
+@app.route('/pdf29')
+def pdf29():
+    return render_template('rss2pdf/pdf29.html')
+
 # 其他
 @app.route('/goldentime')
 def goldentime():
