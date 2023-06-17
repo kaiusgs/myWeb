@@ -1,5 +1,5 @@
 body{
-    background-color:#dddddd
+    background-color:#fafafa
 }
 /*linear-gradient(to bottom,#601C9B,#0787A2);*/
 
@@ -53,4 +53,9 @@ p{
 
 blockquote{
     font-size: 27px;
+}
+
+small{
+    font-size: 25px;
+    font-style: italic;
 }
