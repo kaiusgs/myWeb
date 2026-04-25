@@ -1,7 +1,1 @@
 instance/
-__pycache__/
-flask_app/__pycache__/
-venv/lib/python3.9/site-packages/flask/__pycache__/
-Pipfile
-Pipfile.lock
-.coverage
