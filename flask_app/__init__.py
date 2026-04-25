@@ -6,6 +6,8 @@ def create_app(test_config = None):
     # create the app
     app = Flask(
         __name__, # the name of the current Python module
+        static_folder = '../static',
+        template_folder = "../templates",
         instance_relative_config = True # configuration files are relative to the instance folder.
     )
 
@@ -40,4 +42,21 @@ def create_app(test_config = None):
     from . import auth
     app.register_blueprint(auth.bp)
 
+    # register the blog blueprint 
+    from . import blog
+    app.register_blueprint(blog.bp)
+    # add_url_rule: associates the endpoint name 'index' with the / url 
+    app.add_url_rule('/', endpoint = 'index')
+
     return app
+
+# ******************************
+# Few notes about Jinja 
+# 
+# In Flask, Jinja is configured to autoescape any data that is rendered in HTML templates
+# This means that it’s safe to render user input, including '<' and '>'
+# they will be escaped with safe values that look the same in the browser 
+# 
+# Anything between {{ and }} is an expression that will be output to the final document
+# {% and %} denotes a control flow statement like if and for
+# ****************************** 
