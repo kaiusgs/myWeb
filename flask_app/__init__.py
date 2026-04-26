@@ -16,10 +16,11 @@ def create_app(test_config = None):
         # sets some default configuration 
         SECRET_KEY = 'dev', # should be overridden with a random value when deploying
         DATABASE = os.path.join(app.instance_path, 'flask_app.sqlite'), # the path where the SQLite database file will be saved
+        # app.instance_path: By default the folder 'instance' next to the package or module is assumed to be the instance path.
     )
 
     if test_config is None:
-        # load the instance config, if it exists, when not testing
+        # load the instance config if it exists, when not testing
         # overrides the default configuration with values taken from the config.py file in the instance folder 
         app.config.from_pyfile('config.py', silent = True)
     else:
@@ -29,10 +30,10 @@ def create_app(test_config = None):
     # ensure the instance folder exists
     os.makedirs(app.instance_path, exist_ok = True)
 
-    # a simple page that says hello
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
+    # # a simple page that says hello
+    # @app.route('/hello')
+    # def hello():
+    #     return 'Hello, World!'
 
     # register database functions
     from . import db

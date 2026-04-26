@@ -7,14 +7,7 @@ import functools
 # Then the blueprint is registered with the application when it is available
 
 from flask import (
-    Blueprint, 
-    flash, 
-    g, 
-    redirect, 
-    render_template, 
-    request, 
-    session, 
-    url_for
+    Blueprint, flash, g, redirect, render_template, request, session, url_for
 )
 from werkzeug.security import check_password_hash, generate_password_hash
 
@@ -86,10 +79,10 @@ def login():
 
         error = None
         if user is None:
-            error = 'Incorrect username.'
+            error = 'Incorrect username or password.'
         elif not check_password_hash(user['password'], password):
             # hashes the submitted password and compares them. If they match, the password is valid.
-            error = 'Incorrect password.'
+            error = 'Incorrect username or password.'
 
         if error is None:
             # session is a dict that stores data across requests 
@@ -104,7 +97,7 @@ def login():
 
     return render_template('auth/login.html')
 
-# user's information should be loaded if logged in, for other views 
+# user's information should be loaded for other views if logged in
 # bp.before_app_request() registers a function that runs before the view function, 
 #   no matter what URL is requested
 @bp.before_app_request 

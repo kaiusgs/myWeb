@@ -28,7 +28,7 @@ def close_db(e=None):
         db.close()
 
 
-# Create the tables
+# Reset the database and create the tables
 def init_db():
     db = get_db()
 
@@ -40,7 +40,7 @@ def init_db():
 @click.command('init-db')
 def init_db_command():
     init_db()
-    click.echo('Initialized the database.')
+    click.echo('Successfully initialized the database.')
 
 
 # tells Python how to interpret timestamp values in the database 
