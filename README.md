@@ -18,7 +18,6 @@ SECRET_KEY = 'xxxxxxxxx'
 - Database integration with SQLite 
 - User authentication: signup, login, logout
 ### Upcoming features 
-- debug the blog delete function
 - finish unit test module
 - Blog content display page
 - Username password length check
