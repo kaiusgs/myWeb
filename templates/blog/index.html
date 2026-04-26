@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <div class="container d-flex justify-content-between align-items-center" style="width: 100%; max-width: 45rem;">
+        <h1>Posts</h1>
+        {% if g.user %}
+            <a href="{{ url_for('blog.create') }}" class="btn btn-sm btn-success opacity-75" style="width: 8rem;"><b>New</b></a>
+        {% endif %}
+    </div>    
+{% endblock %}
+
+{% block content %}
+    <div class="container d-flex flex-column align-items-center">
+        {% for post in posts %}
+            <div class="card bg-light text-dark bg-opacity-50 border-light mb-3" style="width: 100%; max-width: 45rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ post['title'] }}</h5>
+                    <h6 class="card-subtitle mb-2 text-secondary small">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</h6>
+                    <p class="card-text">{{ post['body'][:100] }} ...</p> <!-- only first 200 character  -->
+                    <a class="btn btn-sm btn-success opacity-50" href="#">Read full article</a>
+                    <a class="btn btn-sm btn-success opacity-50" href="#">Outer link</a>
+                    {% if g.user['id'] == post['author_id'] %}
+                        <a class="btn btn-sm btn-success opacity-50" href="{{ url_for('blog.update', id=post['id']) }}">Edit</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- loop.last is a special variable 
+            it's used to display a line after each post except the last one -->
+            {% if not loop.last %}
+                <!-- <br> -->
+            {% endif %}
+
+        {% endfor %}
+    </div>
+{% endblock %}

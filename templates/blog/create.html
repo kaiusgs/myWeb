@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <div class="container d-flex justify-content-between align-items-center" style="width: 100%; max-width: 45rem;">
+        <h1>New Post</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container" style="max-width: 45rem;">
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input type="text" class="form-control" name="title" id="title" value="{{ request.form['title'] }}" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="body">Content</label>
+                <textarea class="form-control" rows="15" name="body" id="body">{{ request.form['body'] }}</textarea>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-sm btn-success opacity-50">Save</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <div class="container d-flex justify-content-between align-items-center" style="width: 100%; max-width: 45rem;">
+        <h1>Edit</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container" style="max-width: 45rem;">
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input type="text" class="form-control" name="title" id="title"
+                    value="{{ request.form['title'] or post['title'] }}" required>
+                <!-- if form has been submitted, then display the submitted title that so the user can fix any error -->
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="body">Content</label>
+                <textarea class="form-control" rows="15" name="body" id="body">{{ request.form['body'] or post['body'] }}</textarea>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-sm btn-success opacity-50">Save</button>
+                <form method="post" action="{{ url_for('blog.delete', id=post['id']) }}"> 
+                    <button type="submit" class="btn btn-sm btn-success opacity-50" onclick="return confirm('Are you sure?');">Delete</button>
+                </form>
+            </div>
+        </form>
+    </div>
+{% endblock %}
